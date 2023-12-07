@@ -1,0 +1,10 @@
+# values.yaml in nginx-deployment-chart
+replicaCount: 3
+image:
+  repository: nginx
+  tag: 1.14.2
+  pullPolicy: IfNotPresent
+service:
+  enabled: true
+  port: 80
+  type: LoadBalancer  # or ClusterIP,LoadBalancer, NodePort, etc.
