@@ -1,4 +1,4 @@
-# templates/_service.yml in nginx-deployment-chart
+{{- define "app.helm.chart.service.tpl" -}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -13,3 +13,4 @@ spec:
       port: {{ .Values.service.port }}
       targetPort: 80
   type: {{ .Values.service.type }}
+{{- end -}}

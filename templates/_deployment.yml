@@ -1,4 +1,5 @@
-# templates/_deployment.yml in nginx-deployment-chart
+{{- define "app.helm.chart.deployment.tpl" -}}
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,3 +21,5 @@ spec:
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - containerPort: {{ .Values.service.port }}
+        
+{{- end -}}
